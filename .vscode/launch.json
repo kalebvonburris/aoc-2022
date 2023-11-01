@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Debug unit tests in executable 'advent_of_code'",
             "cargo": {
-                "args": ["test", "--no-run", "--bin=advent_of_code", "--package=advent_of_code"],
+                "args": ["test", "--no-run"],
                 "filter": {
                     "name": "advent_of_code",
                     "kind": "bin"
