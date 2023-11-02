@@ -10,7 +10,7 @@ pub fn part_one(input: &str) -> Option<u32> {
         // Initialize a value to represent the intersection of the two halves
         let mut char_intersection = 0;
         // Find the intersection of the two halves
-        for c in  line[line.len() / 2..line.len()].chars() {
+        for c in line[line.len() / 2..line.len()].chars() {
             if left_compartment.contains(&c) {
                 char_intersection = c as u32;
                 break;
@@ -40,7 +40,7 @@ pub fn part_two(input: &str) -> Option<u32> {
         let first = lines[i].chars().collect::<Vec<char>>();
         let second = lines[i + 1].chars().collect::<Vec<char>>();
         let third = lines[i + 2];
-        // 
+        //
         let mut first_second_intersection: Vec<char> = Vec::new();
         // Find the chars contained in the first and second lines
         for c in second {
@@ -63,7 +63,7 @@ pub fn part_two(input: &str) -> Option<u32> {
         // Lowercase
         else {
             total += char_intersection - '`' as u32;
-        }    
+        }
     }
     Some(total)
 }
@@ -76,8 +76,7 @@ mod tests {
 
     #[test]
     fn test_part_one() {
-        let example = 
-r#"vJrwpWtwJgWrhcsFMMfFFhFp
+        let example = r#"vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
 PmmdzqPrVvPwwTWBwg
 wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
@@ -90,8 +89,7 @@ CrZsJsPPZsGzwwsLwLmpwMDw
 
     #[test]
     fn test_part_two() {
-        let example = 
-r#"vJrwpWtwJgWrhcsFMMfFFhFp
+        let example = r#"vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
 PmmdzqPrVvPwwTWBwg
 wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
