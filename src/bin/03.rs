@@ -1,5 +1,3 @@
-#![feature(iter_advance_by)]
-
 pub fn part_one(input: &str) -> Option<u32> {
     // Trim leading and trailing newlines and whitespace
     let input = input.trim();
@@ -40,7 +38,7 @@ pub fn part_two(input: &str) -> Option<u32> {
         let first = lines[i].chars().collect::<Vec<char>>();
         let second = lines[i + 1].chars().collect::<Vec<char>>();
         let third = lines[i + 2];
-        //
+        // Initialize a value to represent the intersection of the first two groups
         let mut first_second_intersection: Vec<char> = Vec::new();
         // Find the chars contained in the first and second lines
         for c in second {
