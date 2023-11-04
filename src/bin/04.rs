@@ -56,8 +56,9 @@ pub fn part_two(input: &str) -> Option<u32> {
             .collect::<Result<Vec<u32>, _>>()
             .unwrap();
         // Perform range comparison
-        if (first_range[0] <= second_range[1] && first_range[1] >= second_range[1]) ||
-           (second_range[0] <= first_range[1] && second_range[1] >= first_range[1]) {
+        if (first_range[0] <= second_range[1] && first_range[1] >= second_range[1])
+            || (second_range[0] <= first_range[1] && second_range[1] >= first_range[1])
+        {
             pairs += 1;
         }
     }
